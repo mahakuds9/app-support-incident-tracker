@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 15s   # how often Prometheus polls for fresh metrics
+
+scrape_configs:
+  - job_name: "incident_tracker_app"
+    static_configs:
+      - targets: ["host.docker.internal:8000"]
